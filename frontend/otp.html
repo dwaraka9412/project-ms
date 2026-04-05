@@ -14,6 +14,10 @@
 <input id="otp" placeholder="Enter OTP">
 
 <button onclick="verify()">Verify OTP</button>
+<form action="/verify-otp" method="POST">
+  <input type="text" name="otp" placeholder="Enter OTP" required>
+  <button type="submit">Verify OTP</button>
+</form>
 
 <p id="msg"></p>
 
