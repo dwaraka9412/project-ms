@@ -1,6 +1,7 @@
 require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
+const PORT = process.env.PORT || 3000;
 
 const authRoutes = require("./routes/auth");
 const fileRoutes = require("./routes/files");
@@ -17,10 +18,14 @@ const transporter = nodemailer.createTransport({
     pass: process.env.EMAIL_PASS
   }
 });
+app.set("trust proxy",1);
 app.use(session({
   secret: "msdhoni",
   resave: false,
-  saveUninitialized: true
+  saveUninitialized: true,
+  cookie: {
+    secure:false
+  }
 }));
 
 app.use(express.static(path.join(__dirname, "../frontend")));
@@ -72,6 +77,6 @@ app.post("/verify-otp", (req, res) => {
   }
 });
 
-app.listen(5000, () => {
-  console.log("Server running on port 5000");
+app.listen(PORT, () => {
+  console.log("Server running on port 3000");
 });
