@@ -38,13 +38,14 @@ app.use("/uploads", express.static("uploads"));
 app.use("/api/auth", authRoutes);
 app.use("/api/files", fileRoutes);
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "../frontend/index.html"));
+  res.sendFile(path.join(__dirname, "../frontend/register.html"));
 });
 app.post("/register", (req, res) => {
   console.log(req.body);
   res.send("Received");
 });
   app.post("/login", (req, res) => {
+  console.log(req.body);
   res.send("Login working");
 });
 
