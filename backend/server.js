@@ -24,6 +24,7 @@ app.use(session({
 }));
 
 app.use(express.static(path.join(__dirname, "../frontend")));
+app.use(express.urlencoded({ extended: true }));
 
 app.use(cors());
 app.use(express.json());
@@ -35,12 +36,12 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "../frontend/index.html"));
 });
 app.post("/register", (req, res) => {
-  const { email, password } = req.body;
-
-  const otp = otpGenerator.generate(6, {
-    upperCase: false,
-    specialChars: false
-  });
+  console.log(req.body);
+  res.send("Received");
+});
+  app.post("/login", (req, res) => {
+  res.send("Login working");
+});
 
   req.session.otp = otp;
   req.session.user = { email, password };
@@ -58,7 +59,7 @@ app.post("/register", (req, res) => {
     }
     res.redirect("/otp.html");
   });
-});
+
 
 app.post("/verify-otp", (req, res) => {
   const { otp } = req.body;
