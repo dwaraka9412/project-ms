@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Secure Drive</title>
+
+<style>
+
+body{
+font-family: Arial;
+background:#f1f3f4;
+margin:0;
+}
+
+header{
+background:white;
+padding:15px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+box-shadow:0 2px 5px rgba(0,0,0,0.1);
+}
+
+.search{
+padding:8px;
+width:300px;
+border-radius:20px;
+border:1px solid #ccc;
+}
+
+.logout{
+background:red;
+color:white;
+border:none;
+padding:8px 15px;
+border-radius:5px;
+cursor:pointer;
+}
+
+.container{
+padding:20px;
+}
+
+.file{
+background:white;
+padding:15px;
+margin:10px;
+border-radius:10px;
+box-shadow:0 2px 5px rgba(0,0,0,0.1);
+}
+
+button{
+margin:5px;
+padding:6px 12px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h2>Secure Drive</h2>
+
+<input type="text" id="search" class="search" placeholder="Search files">
+
+<button class="logout" onclick="logout()">Logout</button>
+
+</header>
+
+<div class="container">
+
+<h3>Upload File</h3>
+
+<input type="file" id="file">
+<input type="password" id="password" placeholder="File Password">
+
+<button onclick="upload()">Upload</button>
+
+<h3>Files</h3>
+
+<div id="files"></div>
+
+</div>
+
+<script src="dashboard.js"></script>
+
+</body>
+</html>

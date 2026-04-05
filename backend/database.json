@@ -1,0 +1,41 @@
+{
+  "users": [
+    {
+      "email": "dwarakaprakash8210@gmail.com",
+      "password": "1234567"
+    },
+    {
+      "email": "rdwarakaprakash@gmail.com",
+      "password": "1234567"
+    },
+    {
+      "email": "dwarakaprakash9412@gmail.com",
+      "password": "1234567"
+    },
+    {
+      "email": "sathishkumarj276@gmail.com",
+      "password": "1234567"
+    },
+    {
+      "email": "jvasudevan88@gmail.com",
+      "password": "1234567"
+    }
+  ],
+  "files": [
+    {
+      "id": 1773494165576,
+      "filename": "1773494165574.txt",
+      "originalname": "kkj.txt",
+      "uploader": "dwarakaprakash9412@gmail.com",
+      "password": "8210"
+    },
+    {
+      "id": 1773495322694,
+      "filename": "1773495322671.pdf",
+      "originalname": "file (1).pdf",
+      "uploader": "dwarakaprakash8210@gmail.com",
+      "password": "8210"
+    }
+  ],
+  "otp": []
+}
